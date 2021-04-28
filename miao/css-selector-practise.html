@@ -5,25 +5,25 @@
     <meta charset="utf-8">
     <title>Document</title>
     <style>
-      body > p:first-child{
+      body > :first-child{
         color: red;
       }
-      body > p:nth-child(2):focus{
+      body > :nth-child(2):focus{
         color: blue;
       }
-      body > p:nth-child(2):hover{
+      body > :nth-child(2):hover{
         color: red;
       }
-      body > p:nth-child(2):active{
+      body > :nth-child(2):active{
         color: green;
       }
-      p.c > span:nth-child(1){
+      p.c > span{
         color: red;
       }
-      p.c > span > span:nth-child(1){
+      p.c > span > :nth-child(1){
         color: green;
       }
-      p.c > span > span:nth-child(2){
+      p.c > span > :nth-child(2){
         color: blue;
       }
       body > div > a:visited{
