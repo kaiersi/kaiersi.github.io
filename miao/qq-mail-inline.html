@@ -7,41 +7,46 @@
   <meta name="viewport" content="width=600px, initial-scale=1.0">
   <title>Document</title>
   <style>
-    body {
-      margin: 10px;
+    html,body {
+      margin: 0px;
+      height: 100%;
     }
 
     div {
-      border: 1px solid black;
       box-sizing: border-box;
+    }
+    div.body{
+      height: 100%;
+      min-width: 300px;
+      min-height: 300px;
     }
 
     div.top {
       height: 100px;
+      background-color: lightblue;
     }
 
     div.main{
       font-size: 0;
-      height: calc(100vh - 130px);
-      xtext-align: center;
+      height: calc(100% - 100px);
     }
 
     div.nav {
       display: inline-block;
-      font-size: medium;
-      vertical-align: middle;
-      overflow: auto;
       width: 220px;
       height: 100%;
+      font-size: 16px;
+      overflow: auto;
+      background-color: lightcoral;
     }
 
     div.content {
       display: inline-block;
       width: calc(100% - 220px);
       height: 100%;
-      font-size: medium;
+      font-size: 16px;
       overflow: auto;
-      vertical-align: middle;
+      background-color: lightgreen;
     }
 
   </style>
