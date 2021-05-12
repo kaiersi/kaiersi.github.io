@@ -15,25 +15,24 @@
       min-height: 300px;
       position: relative;
     }
-    /* div {
-      box-sizing: border-box;
-    } */
     div.top {
       height: 100px;
       background-color: lightblue;
     }
     div.nav {
       width: 220px;
-      height: calc(100% - 100px);
+      top: 100px;
+      bottom: 0;
       position: absolute;
       overflow: auto;
       background-color: lightcoral;
     }
     div.main {
-      width: calc(100% - 220px);
-      height: calc(100% - 100px);
-      position: absolute;
+      top: 100px;
       left: 220px;
+      right: 0;
+      bottom: 0;
+      position: absolute;
       overflow: auto;
       background-color: lightgreen;
     }
@@ -43,22 +42,21 @@
 <body>
   <div class="body">
     <div class="top">ccc</div>
-    <div class="x">
       <div class="nav">
-        <ul>
-          <li>aaa</li>
-          <li>bbb</li>
-          <li>ccc</li>
-          <li>ddd</li>
-          <li>eee</li>
-        </ul>
-        <ul>
-          <li>aa</li>
-          <li>bb</li>
-          <li>cc</li>
-          <li>dd</li>
-          <li>ee</li>
-        </ul>
+      <ul>
+        <li>aaa</li>
+        <li>bbb</li>
+        <li>ccc</li>
+        <li>ddd</li>
+        <li>eee</li>
+      </ul>
+      <ul>
+        <li>aa</li>
+        <li>bb</li>
+        <li>cc</li>
+        <li>dd</li>
+        <li>ee</li>
+      </ul>
       </div>
       <div class="main">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores placeat nihil praesentium
         laborum porro omnis. Magnam, numquam nisi ad maxime quaerat quae a labore iusto. Atque, aliquam optio. Cum,

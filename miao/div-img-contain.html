@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=600px, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      height: 2000px;
+    }
+    .horiz{
+      width: 80vw;
+      height: 60vh;
+      border: 3px solid black;
+      position: relative;
+    }
+    .verti{
+      width: 35vw;
+      height: 60vh;
+      border: 3px solid black;
+      position: relative;
+    }
+    .horiz img{
+      max-width: 100%;
+      max-height: 100%;
+      position: absolute;
+      margin:auto;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+    }
+    .verti img{
+      max-width: 100%;
+      max-height: 100%;
+      position: absolute;
+      position: absolute;
+      margin:auto;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      
+    }
+    .horizbgi{
+      width: 450px;
+      height: 450px;
+      border: 3px solid black;
+      background: url(../image/horiz-pic.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .vertibgi{
+      width: 230px;
+      height: 230px;
+      border: 3px solid black;
+      background: url(../image/verti-pic.webp);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  </style>
+</head>
+
+<body>
+  div+img max-w/h包含效果 abs定位居中 <br>
+  拉伸浏览器窗口以验证css同时兼容垂直居中和水平居中
+  <div class="horiz">
+    <img src="../image/horiz-pic.png" alt="">
+  </div>
+  <div class="verti">
+    <img src="../image/verti-pic.webp" alt="">
+  </div>
+  <br>
+  <br>
+
+  div+bgi siz-contain pos-center
+  <div class="horizbgi"></div>
+  <div class="vertibgi"></div>
+</body>
+
+</html>

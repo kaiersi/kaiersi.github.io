@@ -23,12 +23,21 @@
       position: absolute;
       background-color: lightgreen;
     }
-    .second{
-      width: calc(100% - 600px);
-      height: 100%;
-      position: absolute;
+    .sechead{
+      height: 100px;
       left: 200px;
-      min-width: 50px;
+      right: 400px;
+      position: absolute;
+      background-color: lightblue;
+    }
+    .content{
+      top: 100px;
+      left: 200px;
+      right: 400px;
+      bottom: 0;
+      position: absolute;
+      background-color: lightyellow;
+      overflow: auto;
     }
     .third{
       width: 200px;
@@ -44,25 +53,16 @@
       right: 0;
       background-color: lightseagreen;
     }
-    .sechead{
-      height: 100px;
-      background-color: lightblue;
-    }
-    .content{
-      height: calc(100% - 100px);
-      background-color: lightyellow;
-      overflow: auto;
-    }
+
   </style>
 </head>
 
 <body>
   <div class="main">
     <div class="first"></div>
-    <div class="second">
       <div class="sechead"></div>
       <div class="content">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque sunt repellendus, maiores odio cumque odit accusantium quaerat. Dolor officia nobis, deleniti vel ea distinctio, ex doloribus magni quam quisquam ipsa debitis. Illum, labore. Dolor rerum, tempora molestias excepturi quas dolore maxime. Laborum ad quisquam error quasi, repudiandae expedita corporis enim nisi reiciendis a quae maxime suscipit ab ipsum eaque nam tenetur. Impedit voluptates unde adipisci et saepe ipsum recusandae placeat nostrum atque? Obcaecati nisi expedita vero tempore deserunt provident omnis voluptatum optio esse. Impedit error obcaecati molestias corporis autem laboriosam?</div>
-    </div>
+    
     <div class="third"></div>
     <div class="fourth"></div>
   </div>
