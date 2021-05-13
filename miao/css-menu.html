@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      margin: 0;
+      height: 2000px;
+    }
+    .menubar{
+      width: 100%;
+      height: 36px;
+      position: fixed;
+      background-color: rgb(60, 60, 60);
+    }
+    #vsicon{
+      height: 100%;
+    }
+    .menubar > .menubuttom > .menuname{
+      margin: auto;
+      padding: 7.5px 10px;
+    }
+    .menubuttom{
+      height: 100%;
+      display: inline-block;
+      vertical-align: top;
+      box-sizing: border-box;
+      position: relative;
+      color: rgb(179, 179, 179);
+    }
+    .menubuttom:hover{
+      background-color:rgb(80, 80, 80);
+    }
+    .menubuttom:hover .menulist{
+      display: block;
+    }
+    .menulist{
+      position: absolute;
+      display: none;
+
+      background-color: rgb(37, 37, 38);
+      color: rgb(179, 179, 179);
+    }
+    .item{
+      white-space: nowrap;
+      padding: 7px 50px 7px 25px ;
+    }
+    .item:hover{
+      background-color:rgb(9, 71, 113)
+    }
+    .secondlevelitem{
+      position: relative;
+      background-image: url(../image/jiantou.png);
+      background-repeat: no-repeat;
+      background-position: 100% 50%;
+    }
+    .menulist .secondlevelitem .menulist{
+      position: absolute;
+      left: 100%;
+      top: 0;
+      display: none;
+    }
+    .menulist .secondlevelitem:hover .menulist{
+      display: block;
+    }
+    pre{
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="menubar">
+    <img id="vsicon" src="../image/vscode_icon.png" alt="">
+    <div class="menubuttom">
+      <p class="menuname">File</p>
+      <div class="menulist">
+        <div class="item">New File</div>
+        <div class="item">New Window</div>
+        <div class="item">Open File...</div>
+        <div class="item">Open Folder...</div>
+        <div class="item">Open Workspace...</div>
+        <div class="item secondlevelitem">Preferences
+          <div class="menulist">
+            <div class="item">Settings</div>
+            <div class="item">Online Server Settings</div>
+            <div class="item">Extensions</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="menubuttom">
+      <p class="menuname">View</p>
+      <div class="menulist">
+        <div class="item">Command Palette...</div>
+        <div class="item">Open View...</div>
+        <div class="item secondlevelitem">Apperance
+          <div class="menulist">
+            <div class="item">Full Screen</div>
+            <div class="item">Zen Mode</div>
+            <div class="item">Centered Layout</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="menubuttom">
+      <p class="menuname">程序</p>
+      <div class="menulist">
+        <div class="item">可拓展性</div>
+        <div class="item secondlevelitem">二级菜单
+          <div class="menulist">
+            <div class="item">aaa</div>
+            <div class="item">bbb</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="menubuttom">
+      <p class="menuname">菜单模板</p>
+      <div class="menulist">
+        <div class="item">
+          <pre>
+            div class="menubuttom"
+              p class="menuname"菜单名/p
+              div class="menulist"
+                div class="item"项目一/div
+                div class="item"项目二/div
+                div class="item"项目三/div
+                div class="item secondlevelitem"二级菜单名
+                  div class="menulist"
+                    div class="item">项目一/div
+                    div class="item">项目二/div
+                  /div
+                /div
+              /div
+            /div</pre>
+        </div>
+        <div class="item secondlevelitem">二级菜单
+          <div class="menulist">
+            <div class="item">aaa</div>
+            <div class="item">bbb</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  
+</body>
+</html>
