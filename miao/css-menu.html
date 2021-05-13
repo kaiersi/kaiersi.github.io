@@ -106,13 +106,15 @@
       </div>
     </div>
     <div class="menubuttom">
-      <p class="menuname">程序</p>
+      <p class="menuname">说明</p>
       <div class="menulist">
-        <div class="item">可拓展性</div>
-        <div class="item secondlevelitem">二级菜单
+        <div class="item">本菜单可以作为html模板使用</div>
+        <div class="item">按照菜单模板里的模板</div>
+        <div class="item">修改元素内容</div>
+        <div class="item">将模板文本和源代码中其他div.menubuttom并列即可</div>
+        <div class="item secondlevelitem">其他
           <div class="menulist">
-            <div class="item">aaa</div>
-            <div class="item">bbb</div>
+            <div class="item">只支持二级菜单</div>
           </div>
         </div>
       </div>
@@ -120,28 +122,36 @@
     <div class="menubuttom">
       <p class="menuname">菜单模板</p>
       <div class="menulist">
+        <div class="item">菜单项</div>
         <div class="item">
           <pre>
-            div class="menubuttom"
-              p class="menuname"菜单名/p
-              div class="menulist"
-                div class="item"项目一/div
-                div class="item"项目二/div
-                div class="item"项目三/div
-                div class="item secondlevelitem"二级菜单名
-                  div class="menulist"
-                    div class="item">项目一/div
-                    div class="item">项目二/div
-                  /div
-                /div
-              /div
-            /div</pre>
+            &lt;div class="menubuttom"&gt;
+              &lt;p class="menuname"菜单名/p&gt;
+              &lt;div class="menulist"&gt;
+                &lt;div class="item"项目一/div&gt;
+                &lt;div class="item"项目二/div&gt;
+                &lt;div class="item"项目三/div&gt;
+                &lt;div class="item secondlevelitem"二级菜单名&gt;
+                  &lt;div class="menulist"&gt;
+                    &lt;div class="item">项目一/div&gt;
+                    &lt;div class="item">项目二/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;</pre>
         </div>
-        <div class="item secondlevelitem">二级菜单
-          <div class="menulist">
-            <div class="item">aaa</div>
-            <div class="item">bbb</div>
-          </div>
+        <div class="item">菜单栏</div>
+        <div class="item">
+          <pre>
+            &lt;div class="menubar"&gt;
+              &lt;img id="vsicon" src="../image/vscode_icon.png" alt=""&gt;
+              菜单项A
+              菜单项B
+              菜单项C
+              ......
+            &lt;/div&gt;
+            </pre>
+          
         </div>
       </div>
     </div>
