@@ -34,15 +34,17 @@
     .menubuttom:hover{
       background-color:rgb(80, 80, 80);
     }
-    .menubuttom:hover .menulist{
-      display: block;
-    }
-    .menulist{
+    .menubuttom > .menulist{
       position: absolute;
-      display: none;
-
+      visibility: hidden;
+      background-color: #ebf2fa;
+      color: #ebf2fa;
+    }
+    .menubuttom:hover > .menulist{
+      visibility: visible;
       background-color: rgb(37, 37, 38);
       color: rgb(179, 179, 179);
+      transition: background-color 0.4s,color 0.2s;
     }
     .item{
       white-space: nowrap;
@@ -51,20 +53,30 @@
     .item:hover{
       background-color:rgb(9, 71, 113)
     }
+    /* 层叠 屏蔽掉一级菜单hover时的
+    .menubuttom:hover .menulist选择器设置的
+    display 
+    应该用 > 进行同级的类选择
+    */
+    .secondlevelitem > .menulist{
+      position: absolute;
+      left: 100%;
+      top: 0;
+      visibility: hidden;
+      background-color: #ebf2fa;
+      color: #ebf2fa;
+    }
+    .secondlevelitem:hover > .menulist{
+      visibility: visible;
+      background-color: rgb(37, 37, 38);
+      color: rgb(179, 179, 179);
+      transition: background-color 0.4s,color 0.2s;
+    }
     .secondlevelitem{
       position: relative;
       background-image: url(../image/jiantou.png);
       background-repeat: no-repeat;
       background-position: 100% 50%;
-    }
-    .menulist .secondlevelitem .menulist{
-      position: absolute;
-      left: 100%;
-      top: 0;
-      display: none;
-    }
-    .menulist .secondlevelitem:hover .menulist{
-      display: block;
     }
     pre{
       margin: 0;
