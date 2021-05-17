@@ -29,13 +29,17 @@
       font-weight: bold;
     }
 
-    /*优先度 dark < striped < hover 
-      bgc类型
-      普通 默认
+    /*background-color层叠设计
+      
+      CSS顺序:  dark < striped < hover 
+      
+      默认样式
       dark 01X黑暗
-      striped 02X普通版 03X黑暗版
-      hover 02X普通版/普通striped  03X黑暗版/黑暗striped
-      依次向上覆盖
+      striped 02X普通striped颜色样式 03X黑暗striped颜色样式
+      hover 02X普通hover颜色样式  03X黑暗hover颜色样式
+
+      既要保证元素选择的正确性、又要保证下方覆盖上方，以符合顺序设计
+      
       */
     table.table-dark td{
       background-color: #212529;
@@ -64,15 +68,20 @@
       background-color: rgb(50,53,57);
     }
 
-    /* 普通 < dark < bordered/borderless
+    /* 
+      border层叠设计
+      CSS顺序 普通 < dark < bordered/borderless
        border属性
-       1 普通 01X常规 02X第一行
-       2 dark 01X常规 02X第一行黑色版
-       3 bordered 01X常规、02X第一行 常规border版
-         02X常规、03X第一行 黑色border版
-       4 borderless 只覆盖123  01X常规、02X第一行
-       分别进行优先度覆盖
-       样式有两种 普通边框颜色和dark边框颜色*/
+       1 普通 01X常规普通样式 02X第一行普通样式
+       2 dark 01X常规黑色样式 02X第一行黑色样式
+       3 bordered 边框有两种颜色版本  普通版和黑色版
+         01X常规bordered颜色样式、02X第一行常规bordered颜色样式
+         02X常规黑色border样式、03X第一行黑色border样式
+       4 borderless 只覆盖12  01X常规、02X第一行
+
+      功能要求、表现上的覆盖要求
+      满足选择元素的功能要求(能不能选中)，并且能在要求的任何地方根据优先级覆盖产生正确的效果(是否覆盖了上面你应该覆盖住的选择器)。
+       =*/
     table.table-bordered td,table.table-bordered th,table.table-bordered tbody tr:first-of-type td{
       border: 1px solid rgb(222,226,230);
     }
