@@ -145,6 +145,39 @@
       
     }
 
+    .v6{
+      width: 210px;
+      height: 200px;
+      display: flow-root;
+      margin-left: 5px;
+      margin-top: 5px;
+    }
+    .v6 span{
+      display: block;
+      width: 60px;
+      height: 60px;
+      margin-left: -5px;
+      margin-top: -5px;
+      background-color: blue;
+      
+      float: left;
+      position: relative;
+      color: green;
+    }
+    .v6 span div{
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      margin: auto;
+      margin-top: 5px;
+      text-align: center;
+      background-color: white;
+    }
+    .v6 span:hover{
+      background-color: red;
+      z-index: 3;
+    }
+    
 
 
     table.v4{
@@ -176,6 +209,7 @@
   </style>
 </head>
 <body>
+  version1<br>
   table
   <table class="v1">
     <col>
@@ -201,6 +235,7 @@
   </table>
   <br>
 
+  version2<br>
   span+float+负margin布局 zindex覆盖右和下边框
   <div class="v2">
     <span>1</span>
@@ -214,7 +249,9 @@
     <span>9</span>
   </div>
 
-  span+float+bordleft/top布局 hover时用::before/::after制造absolute定位的横条/竖条红色背景div，调整位置，用zindex覆盖原位置效果
+  version3<br>
+  span+float布局，对每个元素添加bordleft和top，剩下最右侧和最下侧的border用nth-child选择器补上<br>
+   hover时用::before/::after制造脱离常规流的横条/竖条块元素，设置红色背景，调整好位置，用zindex覆盖原位置效果
   <div class="v3">
     <span>1</span>
     <span>2</span>
@@ -227,7 +264,9 @@
     <span>9</span>
   </div>
 
-  span+float+bordleft/top布局  hover时用::before制造四周边框 调整位置用zindex覆盖
+  version4<br>
+  布局同version3   <br>
+  hover时用::before制造一个和span同宽同高的、脱离常规流块元素，对齐设置四周红色边框，调整好位置用zindex覆盖
   <div class="v5">
     <span>1</span>
     <span>2</span>
@@ -238,6 +277,22 @@
     <span>7</span>
     <span>8</span>
     <span>9</span>
+  </div>
+
+  version5<br>
+  span包裹div,div为白色背景和数字的内围，再加上蓝色则是span <br>
+  span和span之间使用float和负maring布局<br>
+  hover时，span背景色改变为红色，且设置zindex覆盖右方和下方后渲染的其他span背景色
+  <div class="v6">
+    <span><div>1</div></span>
+    <span><div>2</div></span>
+    <span><div>3</div></span>
+    <span><div>4</div></span>
+    <span><div>5</div></span>
+    <span><div>6</div></span>
+    <span><div>7</div></span>
+    <span><div>8</div></span>
+    <span><div>9</div></span>
   </div>
 
 
