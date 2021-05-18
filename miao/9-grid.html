@@ -108,6 +108,43 @@
       background-color: red;
     }
 
+    .v5{
+      width: 170px;
+      height: 200px;
+      display: flow-root;
+    }
+    .v5 span{
+      display: block;
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+      border-left: 5px solid blue;
+      border-top: 5px solid blue;
+      float: left;
+      position: relative;
+      color: green;
+    }
+    .v5 span:nth-child(n+7){
+      border-bottom: 5px solid blue;
+    }
+    .v5 span:nth-child(3n+3){
+      border-right: 5px solid blue;
+    }
+    .v5 span:hover::before{
+      content: '';
+      display: block;
+      position: absolute;
+      right: -5px;
+      bottom: -5px;
+      z-index: 3;
+
+      width: 50px;
+      height: 50px;
+      border: 5px solid red;
+      
+    }
+
 
 
     table.v4{
@@ -177,7 +214,7 @@
     <span>9</span>
   </div>
 
-  span+float+bordleft/top布局 ::before/::after制造右边框/下边框
+  span+float+bordleft/top布局 hover时用::before/::after制造absolute定位的横条/竖条红色背景div，调整位置，用zindex覆盖原位置效果
   <div class="v3">
     <span>1</span>
     <span>2</span>
@@ -189,6 +226,21 @@
     <span>8</span>
     <span>9</span>
   </div>
+
+  span+float+bordleft/top布局  hover时用::before制造四周边框 调整位置用zindex覆盖
+  <div class="v5">
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+    <span>4</span>
+    <span>5</span>
+    <span>6</span>
+    <span>7</span>
+    <span>8</span>
+    <span>9</span>
+  </div>
+
+
 
   table-collapse 残缺效果
   <div>
