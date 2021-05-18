@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      height: 2000px;
+    }
+    *{
+      xbackground-color: rgba(0, 0, 0, 0.075);
+    }
+    table.v1{
+      border-collapse: collapse;
+    }
+    .v1 col{
+      border: 5px solid blue;
+    }
+    .v1 tr{
+      border: 5px solid blue;
+    }
+    .v1 td{
+      width: 50px;
+      height: 50px;
+      padding: 0;
+      text-align: center;
+      color: green;
+    }
+    .v1 td:hover{
+      border: 5px solid red;
+    }
+
+    .v2{
+      width: 170px;
+      height: 200px;
+      display: flow-root;
+      margin-left: 5px;
+    }
+    .v2 span{
+      display: block;
+      width: 50px;
+      height: 50px;
+      border: 5px solid blue;
+      text-align: center;
+      line-height: 50px;
+      float: left;
+      margin-left: -5px;
+      margin-bottom: -5px;
+      position: relative;
+      color: green;
+    }
+    .v2 span:hover{
+      z-index: 3;
+      border: 5px solid red;
+    }
+
+    .v3{
+      width: 170px;
+      height: 200px;
+      display: flow-root;
+    }
+    .v3 span{
+      display: block;
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+      border-left: 5px solid blue;
+      border-top: 5px solid blue;
+      float: left;
+      position: relative;
+      color: green;
+    }
+    .v3 span:nth-child(n+7){
+      border-bottom: 5px solid blue;
+    }
+    .v3 span:nth-child(3n+3){
+      border-right: 5px solid blue;
+    }
+    .v3 span:hover{
+      border-left: 5px solid red;
+      border-top: 5px solid red;
+    }
+    .v3 span:hover::before{
+      content: '';
+      display: block;
+      position: absolute;
+      right: -5px;
+      bottom: 0;
+      z-index: 3;
+
+      width: 5px;
+      height: 55px;
+      background-color: red;
+    }
+    .v3 span:hover::after{
+      content: '';
+      display: block;
+      position: absolute;
+      right: -5px;
+      bottom: -5px;
+      z-index: 3;
+
+      width: 60px;
+      height: 5px;
+      background-color: red;
+    }
+
+
+
+    table.v4{
+      border-collapse: collapse;
+    }
+    .v4 td{
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      border:  5px solid blue;
+
+      color: green;
+    }
+    .v4 tr td:first-child{
+      border-right: none;
+    }
+    .v4 tr td:nth-child(2){
+      border-right: none;
+    }
+    .v4 tr:first-child td{
+      border-bottom: none;
+    }
+    .v4 tr:nth-child(2) td{
+      border-bottom: none;
+    }
+    .v4 tbody td:hover{
+      border: 5px solid red ;
+    }
+  </style>
+</head>
+<body>
+  table
+  <table class="v1">
+    <col>
+    <col>
+    <col>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+
+  span+负margin+zindex
+  <div class="v2">
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+    <span>4</span>
+    <span>5</span>
+    <span>6</span>
+    <span>7</span>
+    <span>8</span>
+    <span>9</span>
+  </div>
+
+  span+::before/::after制造右边框/下边框
+  <div class="v3">
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+    <span>4</span>
+    <span>5</span>
+    <span>6</span>
+    <span>7</span>
+    <span>8</span>
+    <span>9</span>
+  </div>
+
+  table-collapse 残缺效果
+  <div>
+    <table class="v4">
+      <col>
+      <col>
+      <col>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>5</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>8</td>
+          <td>9</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+
+</body>
+</html>

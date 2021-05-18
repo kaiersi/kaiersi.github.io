@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      height: 2000px;
+    }
+    *{
+      background-color: rgba(0, 0, 0, 0.075);
+    }
+    div.main{
+      width: 200px;
+      height: 200px;
+      text-align: center;
+      position: relative;
+      resize: both;
+      overflow: auto;
+      border: 1px solid black;
+    }
+    div.content1{
+      width: 80px;
+      height: 80px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -40px;
+      margin-left: -40px;
+      line-height: 80px;
+    }
+    div.content2{
+      width: 80px;
+      height: 80px;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      line-height: 80px;
+    }
+    div.content3{
+      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+      vertical-align: middle;
+    }
+    .main3{
+      box-sizing: border-box;
+      padding: 50px;
+    }
+    .invisible{
+      height: 100%;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+  div居中:<br>
+  top: 50%;<br>
+  left: 50%;<br>
+  margin-top: -50%本身的height;<br>
+  margin-left: -50%本身的width;<br>
+  文本居中:<br>
+  line-height: 本身的height<br>
+  <div class="main">
+    <div class="content1">
+      aaa
+    </div>
+  </div>
+  <br>
+  div居中:<br>
+  position: absolute;<br>
+  top: 0;<br>
+  bottom: 0;<br>
+  left: 0;<br>
+  right: 0;<br>
+  margin: auto;<br>
+  文本居中:<br>
+  line-height: 本身的height<br>
+  <div class="main">
+    <div class="content2">
+      aaa
+    </div>
+  </div>
+  <br>
+  div居中:<br>
+  padding: 50px;<br>
+  文本居中:<br>
+  设置一个宽度0的div，文本和div middle对齐<br>
+  height: 100%;<br>
+  display: inline-block;<br>
+  vertical-align: middle;<br>
+  <div class="main main3">
+    <div class="content3">
+      aaa
+      <div class="invisible"></div>
+    </div>
+  </div>
+</body>
+</html>
