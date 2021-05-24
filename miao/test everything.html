@@ -6,50 +6,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    body{
-      height: 2000px;
+    div {
+      height: 300px;
     }
-    .outer{
-      width: 200px;
-      height: 100px;
-      background-color: green;
-      display: block;
-    }
-    .inner{
-      font-size: 12px;
-      line-height: 1em;
-    }
-    #check{
-      visibility: hidden;
-      position: absolute;
-    }
-    #check:checked + label{
-      background-color: lightblue;
-      font-size: 2.7em;
-      transition: font-size 3s,background-color 0.2s;
-      line-height: 1em;
-    }
-    label{
-      display: block;
-      width: 200px;
-      height: 100px;
-      position: relative;
-      cursor: pointer;
+    .s2{
+      xdisplay: inline-block;
+      margin: 100px;
+      width: 100px;
+      height: 50px;
+      xbackground-color: lightblue;
     }
     span{
-      position: absolute;
-      bottom: 3px;
-      left: 0;
+      display: inline-block;
     }
-    
+    span:nth-of-type(2){
+      
+      background-color: lightblue;
+    }
+
   </style>
+
 </head>
 <body>
-  <div class="outer">
-    <input type="checkbox" name="" id="check">
-    <label for="check" class="inner">
-      <span>订阅博客</span>
-    </label>
+  <div>
+    <span>1</span>
+    <div></div>
+    <span class="s2">2</span>
   </div>
+  <div>
+    <span>3</span>
+    <span>4</span>
+  </div>
+
 </body>
 </html>

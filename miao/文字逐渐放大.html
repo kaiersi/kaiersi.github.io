@@ -12,12 +12,7 @@
     .outer{
       width: 200px;
       height: 100px;
-      background-color: green;
       display: block;
-    }
-    .inner{
-      font-size: 12px;
-      line-height: 1em;
     }
     #check{
       visibility: hidden;
@@ -26,20 +21,21 @@
     #check:checked + label{
       background-color: lightblue;
       font-size: 2.7em;
-      transition: font-size 3s,background-color 0.2s;
       line-height: 1em;
+      transition: font-size 3s,background-color 0.2s;
     }
     label{
       display: block;
-      width: 200px;
-      height: 100px;
+      height: 80px;
+      box-sizing: border-box;
       position: relative;
       cursor: pointer;
-    }
-    span{
-      position: absolute;
-      bottom: 3px;
-      left: 0;
+      padding-top: 50px;
+      vertical-align: bottom;
+      background-color: green;
+      
+      font-size: 12px;
+      line-height: 1em;
     }
     
   </style>
@@ -48,7 +44,7 @@
   <div class="outer">
     <input type="checkbox" name="" id="check">
     <label for="check" class="inner">
-      <span>订阅博客</span>
+      订阅博客
     </label>
   </div>
 </body>
