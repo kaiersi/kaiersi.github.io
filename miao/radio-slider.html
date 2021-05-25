@@ -28,7 +28,7 @@
 
     section.carousel2{
       width: 600px;
-      height: 401px;
+      xheight: 401px;
       font-size: 0;
       background-color: lightblue;
     }
@@ -39,6 +39,93 @@
       display: inline-block;
       width: 150px;
       height: 401px;
+      position: relative;
+      overflow: hidden;
+    }
+    section.carousel2 span{
+      display: inline-block;
+      width: 150px;
+      height: 401px;
+      position: absolute;
+      left: -150px;
+      transition: left 1s;
+    }
+    .myimg{
+      display: inline-block;
+      width: 150px;
+      height: 401px;
+
+    }
+    .d1 .p1{
+      background-image: url(https://tympanus.net/Tutorials/CSS3SlidingImagePanels/images/1.jpg);
+    }
+    .d2 .p1{
+      background-image: url(https://tympanus.net/Tutorials/CSS3SlidingImagePanels/images/1.jpg);
+      background-position: -150px 0;
+    }
+    .d3 .p1{
+      background-image: url(https://tympanus.net/Tutorials/CSS3SlidingImagePanels/images/1.jpg);
+      background-position: -300px 0;
+    }
+    .d4 .p1{
+      background-image: url(https://tympanus.net/Tutorials/CSS3SlidingImagePanels/images/1.jpg);
+      background-position: -450px 0;
+    }
+
+    .d1 .p2{
+      background-image: url(https://tympanus.net/Tutorials/CSS3SlidingImagePanels/images/2.jpg);
+    }
+    .d2 .p2{
+      background-image: url(https://tympanus.net/Tutorials/CSS3SlidingImagePanels/images/2.jpg);
+      background-position: -150px 0;
+    }
+    .d3 .p2{
+      background-image: url(https://tympanus.net/Tutorials/CSS3SlidingImagePanels/images/2.jpg);
+      background-position: -300px 0;
+    }
+    .d4 .p2{
+      background-image: url(https://tympanus.net/Tutorials/CSS3SlidingImagePanels/images/2.jpg);
+      background-position: -450px 0;
+    }
+
+    .d1 .p3{
+      background-image: url(https://tympanus.net/Tutorials/CSS3SlidingImagePanels/images/3.jpg);
+    }
+    .d2 .p3{
+      background-image: url(https://tympanus.net/Tutorials/CSS3SlidingImagePanels/images/3.jpg);
+      background-position: -150px 0;
+    }
+    .d3 .p3{
+      background-image: url(https://tympanus.net/Tutorials/CSS3SlidingImagePanels/images/3.jpg);
+      background-position: -300px 0;
+    }
+    .d4 .p3{
+      background-image: url(https://tympanus.net/Tutorials/CSS3SlidingImagePanels/images/3.jpg);
+      background-position: -450px 0;
+    }
+
+    .d1 .p4{
+      background-image: url(https://tympanus.net/Tutorials/CSS3SlidingImagePanels/images/4.jpg);
+    }
+    .d2 .p4{
+      background-image: url(https://tympanus.net/Tutorials/CSS3SlidingImagePanels/images/4.jpg);
+      background-position: -150px 0;
+    }
+    .d3 .p4{
+      background-image: url(https://tympanus.net/Tutorials/CSS3SlidingImagePanels/images/4.jpg);
+      background-position: -300px 0;
+    }
+    .d4 .p4{
+      background-image: url(https://tympanus.net/Tutorials/CSS3SlidingImagePanels/images/4.jpg);
+      background-position: -450px 0;
+    }
+
+    .carousel2 input:nth-of-type(1):checked ~ div .p1,
+    .carousel2 input:nth-of-type(2):checked ~ div .p2,
+    .carousel2 input:nth-of-type(3):checked ~ div .p3,
+    .carousel2 input:nth-of-type(4):checked ~ div .p4{
+      left: 0;
+      transition: left 1s;
     }
 
   </style>
@@ -55,37 +142,40 @@
       <img src="https://travel.12306.cn/imgs/resources/uploadfiles/images/c7c03732-3c86-4308-aea7-df747d4999e8_product_W572_H370.jpg" alt="">
     </div>
   </section>
-<!-- 
+
   <section class="carousel2">
-    <div class="d1">
-
-    </div>
-    <div class="d2">
-
-    </div>
-    <div class="d3">
-
-    </div>
-    <div class="d4">
-
-    </div>
-
-
-
-
-
-
+    <input type="radio" name="b" id="" checked>
     <input type="radio" name="b" id="">
     <input type="radio" name="b" id="">
     <input type="radio" name="b" id="">
     <div>
-      <img src="https://tympanus.net/Tutorials/CSS3SlidingImagePanels/images/1.jpg" alt="">
-      <img src="https://tympanus.net/Tutorials/CSS3SlidingImagePanels/images/2.jpg" alt="">
-      <img src="https://tympanus.net/Tutorials/CSS3SlidingImagePanels/images/3.jpg" alt="">
+      <div class="d1">
+        <span class="p5"></span>
+        <span class="p1"></span>
+        <span class="p2"></span>
+        <span class="p3"></span>
+        <span class="p4"></span>
+      </div>
+      <div class="d2">
+        <span class="p1"></span>
+        <span class="p2"></span>
+        <span class="p3"></span>
+        <span class="p4"></span>
+      </div>
+      <div class="d3">
+        <span class="p1"></span>
+        <span class="p2"></span>
+        <span class="p3"></span>
+        <span class="p4"></span>
+      </div>
+      <div class="d4">
+        <span class="p1"></span>
+        <span class="p2"></span>
+        <span class="p3"></span>
+        <span class="p4"></span>
+      </div>
     </div>
-  </section> -->
-  
-  
+  </section> 
   
 
 </body>
