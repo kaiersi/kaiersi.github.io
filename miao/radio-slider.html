@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    section.carousel input:nth-of-type(1):checked ~ div img:nth-of-type(1),
+    section.carousel input:nth-of-type(2):checked ~ div img:nth-of-type(2),
+    section.carousel input:nth-of-type(3):checked ~ div img:nth-of-type(3){
+      left: 0;
+      transition: left 1s;
+      z-index: 3;
+    }
+    section.carousel img{
+      position: absolute;
+      width: 600px;
+      left: 100%;
+      transition: left 1s;
+    }
+    section.carousel div{
+      width: 600px;
+      height: 375px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    section.carousel2{
+      width: 600px;
+      height: 401px;
+      font-size: 0;
+      background-color: lightblue;
+    }
+    section.carousel2 .d1,
+    section.carousel2 .d2,
+    section.carousel2 .d3,
+    section.carousel2 .d4{
+      display: inline-block;
+      width: 150px;
+      height: 401px;
+    }
+
+  </style>
+
+</head>
+<body>
+  <section class="carousel">
+    <input type="radio" name="a" id="" checked>
+    <input type="radio" name="a" id="">
+    <input type="radio" name="a" id="">
+    <div>
+      <img src="https://travel.12306.cn/imgs/resources/uploadfiles/images/1716878f-79a2-4db1-af8c-b9c2039f0b3c_product_W572_H370.jpg" alt="">
+      <img src="https://travel.12306.cn/imgs/resources/uploadfiles/images/6d77d0ea-53d0-4518-b7e9-e53795b4920c_product_W572_H370.jpg" alt="">
+      <img src="https://travel.12306.cn/imgs/resources/uploadfiles/images/c7c03732-3c86-4308-aea7-df747d4999e8_product_W572_H370.jpg" alt="">
+    </div>
+  </section>
+<!-- 
+  <section class="carousel2">
+    <div class="d1">
+
+    </div>
+    <div class="d2">
+
+    </div>
+    <div class="d3">
+
+    </div>
+    <div class="d4">
+
+    </div>
+
+
+
+
+
+
+    <input type="radio" name="b" id="">
+    <input type="radio" name="b" id="">
+    <input type="radio" name="b" id="">
+    <div>
+      <img src="https://tympanus.net/Tutorials/CSS3SlidingImagePanels/images/1.jpg" alt="">
+      <img src="https://tympanus.net/Tutorials/CSS3SlidingImagePanels/images/2.jpg" alt="">
+      <img src="https://tympanus.net/Tutorials/CSS3SlidingImagePanels/images/3.jpg" alt="">
+    </div>
+  </section> -->
+  
+  
+  
+
+</body>
+</html>
