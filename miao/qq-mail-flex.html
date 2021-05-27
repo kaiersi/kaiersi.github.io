@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Flexbox wrap 0 — children overflowing</title>
+    <style>
+      html,body{
+        height: 100%;
+        margin: 0;
+      }
+      section{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+      header{
+        height: 100px;
+        flex-shrink: 0;
+        background-color: lightblue;
+      }
+      div{
+        flex-grow: 1;
+        flex-shrink: 3;
+        
+        display: flex;
+      }
+      aside{
+        width: 200px;
+        flex-shrink: 0;
+        background-color: lightcoral;
+      }
+      main{
+        flex-grow: 1;
+        background-color: lightpink;
+        overflow: auto;
+        max-height: calc(100vh - 100px);
+      }
+
+    </style>
+  </head>
+  <body>
+    <section>
+      <header></header>
+      <div>
+        <aside></aside>
+        <main>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla quibusdam quae quo veritatis quidem aut, ad corrupti autem laborum alias repellendus reprehenderit consequatur, quis ratione maiores asperiores adipisci quia deserunt. Ullam sequi maxime doloribus? Temporibus in ipsum odio deserunt debitis hic commodi fugiat. Voluptas explicabo quos doloribus doloremque, iste quia cumque consectetur facere deserunt eos quis atque cum, distinctio enim nulla similique repellendus perspiciatis. Fugiat totam ipsam libero, maxime hic veniam accusamus nihil quidem pariatur asperiores dignissimos possimus dicta quia molestias voluptate? Soluta iure molestias voluptas ut fugit magnam illum harum in nulla exercitationem doloremque quaerat, numquam iusto modi aspernatur reprehenderit enim perspiciatis voluptate, et odit totam consectetur nihil amet! Molestias non dolor et est facilis. Voluptate unde animi incidunt cum possimus sit rerum saepe repellendus est illo modi nulla itaque, iure at magni. Totam iusto placeat perspiciatis doloribus minus eum ut! Velit tenetur dolores recusandae suscipit at perspiciatis temporibus numquam. Commodi, corporis ab quibusdam nulla consequatur autem omnis vel quod. Fugiat repellendus laudantium quo quaerat vero libero officia corporis illo doloremque velit veniam, accusamus, qui facere repudiandae vitae quod. Alias id odio aut tenetur ad ab totam hic qui inventore. Libero rem asperiores numquam temporibus commodi mollitia suscipit quibusdam eius voluptates natus cumque, doloribus ducimus architecto? Fugit nisi labore laborum. Ratione, at, minus dolorem non velit natus pariatur nesciunt soluta sed et in consequuntur consequatur officiis quis corrupti, quos reiciendis? Inventore est repellendus quo ipsam cumque, qui recusandae, iusto fugit tempore saepe facilis eaque pariatur. Natus labore minima, assumenda amet maiores deserunt! Aperiam, eligendi? Dolore, tenetur nam esse aliquam nisi facilis quo excepturi consequuntur voluptate, delectus maxime odit, pariatur vel officiis nobis animi? Suscipit est asperiores aliquam numquam rem unde minus perspiciatis nisi incidunt quaerat ipsum accusamus, exercitationem sunt dicta libero impedit, veritatis tempore dolore quo rerum, amet ducimus.</main>
+      </div>
+    </section>
+  </body>
+</html>
