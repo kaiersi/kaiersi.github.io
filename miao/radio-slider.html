@@ -1,182 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    section.carousel input:nth-of-type(1):checked ~ div img:nth-of-type(1),
-    section.carousel input:nth-of-type(2):checked ~ div img:nth-of-type(2),
-    section.carousel input:nth-of-type(3):checked ~ div img:nth-of-type(3){
-      left: 0;
-      transition: left 1s;
-      z-index: 3;
+    header{
+      height: 100px;
+      background: url(../image/headerflower.jpg) no-repeat right top;
     }
-    section.carousel img{
+    div.body{
+      background: url(../image/bg.jpg) repeat-x;
+      background-color:rgb(250,247,239)
+    }
+    /* animation set */
+    main{
+      width: 60px;
+      height: 106px;
+      box-sizing: border-box;
       position: absolute;
-      width: 600px;
-      left: 100%;
-      transition: left 1s;
+      left: -60px;
+
+      border: 2px solid red;
+      animation: back 1s alternate;
+      xvisibility: hidden;
     }
-    section.carousel div{
-      width: 600px;
-      height: 375px;
+    @keyframes boxwidth {
+      from{left:-60px}
+      to{left: 0px;}
+    }
+    @keyframes back {
+      from{left:0px;}
+      to{left: 60px;}
+    }
+    input:nth-of-type(2):checked ~ div main:nth-of-type(1),
+    input:nth-of-type(3):checked ~ div main:nth-of-type(2){
+      animation: boxwidth 1s alternate forwards;
+    }
+    /* image clip */
+    main:nth-of-type(1){
+      background-image: url(../image/arisa_2.jpg);
+      background-size: cover;
+    }
+    main:nth-of-type(2){
+      background-image: url(../image/arisa_2.jpg);
+      background-size: cover;
+      background-position: 60px;
+    }
+    .container{
+      width: 60px;
+      height: 106px;
       position: relative;
+      left: 60px;
+    }
+    .of:checked ~ .container{
       overflow: hidden;
-    }
-
-    section.carousel2{
-      width: 600px;
-      xheight: 401px;
-      font-size: 0;
-      background-color: lightblue;
-    }
-    section.carousel2 .d1,
-    section.carousel2 .d2,
-    section.carousel2 .d3,
-    section.carousel2 .d4{
-      display: inline-block;
-      width: 150px;
-      height: 401px;
-      position: relative;
-      overflow: hidden;
-    }
-    section.carousel2 span{
-      display: inline-block;
-      width: 150px;
-      height: 401px;
-      position: absolute;
-      left: -150px;
-      transition: left 1s;
-    }
-    .myimg{
-      display: inline-block;
-      width: 150px;
-      height: 401px;
 
     }
-    .d1 .p1{
-      background-image: url(https://tympanus.net/Tutorials/CSS3SlidingImagePanels/images/1.jpg);
-    }
-    .d2 .p1{
-      background-image: url(https://tympanus.net/Tutorials/CSS3SlidingImagePanels/images/1.jpg);
-      background-position: -150px 0;
-    }
-    .d3 .p1{
-      background-image: url(https://tympanus.net/Tutorials/CSS3SlidingImagePanels/images/1.jpg);
-      background-position: -300px 0;
-    }
-    .d4 .p1{
-      background-image: url(https://tympanus.net/Tutorials/CSS3SlidingImagePanels/images/1.jpg);
-      background-position: -450px 0;
-    }
-
-    .d1 .p2{
-      background-image: url(https://tympanus.net/Tutorials/CSS3SlidingImagePanels/images/2.jpg);
-    }
-    .d2 .p2{
-      background-image: url(https://tympanus.net/Tutorials/CSS3SlidingImagePanels/images/2.jpg);
-      background-position: -150px 0;
-    }
-    .d3 .p2{
-      background-image: url(https://tympanus.net/Tutorials/CSS3SlidingImagePanels/images/2.jpg);
-      background-position: -300px 0;
-    }
-    .d4 .p2{
-      background-image: url(https://tympanus.net/Tutorials/CSS3SlidingImagePanels/images/2.jpg);
-      background-position: -450px 0;
-    }
-
-    .d1 .p3{
-      background-image: url(https://tympanus.net/Tutorials/CSS3SlidingImagePanels/images/3.jpg);
-    }
-    .d2 .p3{
-      background-image: url(https://tympanus.net/Tutorials/CSS3SlidingImagePanels/images/3.jpg);
-      background-position: -150px 0;
-    }
-    .d3 .p3{
-      background-image: url(https://tympanus.net/Tutorials/CSS3SlidingImagePanels/images/3.jpg);
-      background-position: -300px 0;
-    }
-    .d4 .p3{
-      background-image: url(https://tympanus.net/Tutorials/CSS3SlidingImagePanels/images/3.jpg);
-      background-position: -450px 0;
-    }
-
-    .d1 .p4{
-      background-image: url(https://tympanus.net/Tutorials/CSS3SlidingImagePanels/images/4.jpg);
-    }
-    .d2 .p4{
-      background-image: url(https://tympanus.net/Tutorials/CSS3SlidingImagePanels/images/4.jpg);
-      background-position: -150px 0;
-    }
-    .d3 .p4{
-      background-image: url(https://tympanus.net/Tutorials/CSS3SlidingImagePanels/images/4.jpg);
-      background-position: -300px 0;
-    }
-    .d4 .p4{
-      background-image: url(https://tympanus.net/Tutorials/CSS3SlidingImagePanels/images/4.jpg);
-      background-position: -450px 0;
-    }
-
-    .carousel2 input:nth-of-type(1):checked ~ div .p1,
-    .carousel2 input:nth-of-type(2):checked ~ div .p2,
-    .carousel2 input:nth-of-type(3):checked ~ div .p3,
-    .carousel2 input:nth-of-type(4):checked ~ div .p4{
-      left: 0;
-      transition: left 1s;
-    }
-
   </style>
-
 </head>
-<body>
-  <section class="carousel">
-    <input type="radio" name="a" id="" checked>
-    <input type="radio" name="a" id="">
-    <input type="radio" name="a" id="">
-    <div>
-      <img src="https://travel.12306.cn/imgs/resources/uploadfiles/images/1716878f-79a2-4db1-af8c-b9c2039f0b3c_product_W572_H370.jpg" alt="">
-      <img src="https://travel.12306.cn/imgs/resources/uploadfiles/images/6d77d0ea-53d0-4518-b7e9-e53795b4920c_product_W572_H370.jpg" alt="">
-      <img src="https://travel.12306.cn/imgs/resources/uploadfiles/images/c7c03732-3c86-4308-aea7-df747d4999e8_product_W572_H370.jpg" alt="">
-    </div>
-  </section>
 
-  <section class="carousel2">
-    <input type="radio" name="b" id="" checked>
-    <input type="radio" name="b" id="">
-    <input type="radio" name="b" id="">
-    <input type="radio" name="b" id="">
-    <div>
-      <div class="d1">
-        <span class="p5"></span>
-        <span class="p1"></span>
-        <span class="p2"></span>
-        <span class="p3"></span>
-        <span class="p4"></span>
+<body>
+  <div class="body">
+    <header></header>
+    <section>
+      <input type="checkbox" name="" id="" class="of">隐藏溢出
+      <br>
+      <input type="radio" name="a" id="a" checked>
+      <input type="radio" name="a" id="a">
+      <div class="container">
+        <main>
+          <div class="zzz">
+            <span></span>
+          </div>
+        </main>
+        <main>
+          <div class="zzz">
+            <span></span>
+          </div>
+        </main>
+
       </div>
-      <div class="d2">
-        <span class="p1"></span>
-        <span class="p2"></span>
-        <span class="p3"></span>
-        <span class="p4"></span>
-      </div>
-      <div class="d3">
-        <span class="p1"></span>
-        <span class="p2"></span>
-        <span class="p3"></span>
-        <span class="p4"></span>
-      </div>
-      <div class="d4">
-        <span class="p1"></span>
-        <span class="p2"></span>
-        <span class="p3"></span>
-        <span class="p4"></span>
-      </div>
-    </div>
-  </section> 
+    </section>
+    <footer></footer>
+  </div>
   
 
+
 </body>
+
 </html>

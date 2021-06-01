@@ -1,63 +1,91 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Flexbox wrap 0 — children overflowing</title>
-    <style>
-      html,body{
-        height: 100%;
-        margin: 0;
-      }
-      section{
-        height: 100%;
-        display: flex;
-        min-width: 650px;
-        min-height: 200px;
-      }
-      .d1,.d3,.d4{
-        width: 200px;
-        flex-shrink: 0;
-      }
-      .d1{
-        background-color: lightpink;
-      }
-      .d2{
-        flex-grow: 1;
-        display: flex;
-        flex-direction: column;
-      }
-      .d3{
-        background-color: lightskyblue;
-        
-      }
-      .d4{
-        background-color: lightsalmon;
-        
-      }
-      header{
-        height: 100px;
-        background-color: lightblue;
-        flex-shrink: 0;
-      }
-      main{
-        flex-grow: 1;
-        background-color: lime;
-        overflow: auto;
-      }
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    header{
+      height: 100px;
+      background: url(../image/headerflower.jpg) no-repeat right top;
+    }
+    div.body{
+      background: url(../image/bg.jpg) repeat-x;
+      background-color:rgb(250,247,239)
+    }
+    main{
+      width: 60px;
+      height: 106px;
+      box-sizing: border-box;
+      position: absolute;
+      left: -60px;
 
-    </style>
-  </head>
-  <body>
+      border: 2px solid red;
+      animation: back 1s alternate;
+      xvisibility: hidden;
+    }
+    @keyframes boxwidth {
+      from{left:-60px}
+      to{left: 0px;}
+    }
+    @keyframes back {
+      from{left:0px;}
+      to{left: 60px;}
+    }
+    input:nth-of-type(2):checked ~ div main:nth-of-type(1),
+    input:nth-of-type(3):checked ~ div main:nth-of-type(2){
+      animation: boxwidth 1s alternate forwards;
+    }
+    main:nth-of-type(1){
+      background-image: url(../image/arisa_2.jpg);
+      background-size: cover;
+    }
+    main:nth-of-type(2){
+      background-image: url(../image/arisa_2.jpg);
+      background-size: cover;
+      background-position: 60px;
+    }
+    .container{
+      width: 60px;
+      height: 106px;
+      position: relative;
+      left: 60px;
+    }
+    .of:checked ~ .container{
+      overflow: hidden;
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="body">
+    <header></header>
     <section>
-      <div class="d1"></div>
-      <div class="d2">
-        <header></header>
-        <main>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam exercitationem tempora quae numquam vitae debitis, ullam, labore enim saepe assumenda laborum architecto asperiores quasi illum quia cumque iure mollitia. Id! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic consectetur officia velit necessitatibus, enim eius quos voluptatum voluptatibus ipsum at facere! Minus iste earum, in totam architecto doloribus laudantium sit.</main>
-      </div>
-      <div class="d3"></div>
-      <div class="d4"></div>
-    </section>
-    
+      <input type="checkbox" name="" id="" class="of">隐藏溢出
+      <br>
+      <input type="radio" name="a" id="a" checked>
+      <input type="radio" name="a" id="a">
+      <div class="container">
+        <main>
+          <div class="zzz">
+            <span></span>
+          </div>
+        </main>
+        <main>
+          <div class="zzz">
+            <span></span>
+          </div>
+        </main>
 
-  </body>
+      </div>
+    </section>
+    <footer></footer>
+  </div>
+  
+
+
+</body>
+
 </html>

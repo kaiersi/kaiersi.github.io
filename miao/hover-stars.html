@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
+    <style>
+      html,body{
+        height: 100%;
+        margin: 0;
+      }
+      section{
+        height: 300px;
+      }
+      section i{
+        position: absolute;
+        padding-right: 0.43px;
+      }
+      i:nth-child(1){
+        left: 180px;
+      }
+      i:nth-child(2){
+        left: 135px;
+      }
+      i:nth-child(3){
+        left: 90px;
+      }
+      i:nth-child(4){
+        left: 45px;
+      }
+      i:nth-child(5){
+        left: 0;
+      }
+      
+      i:hover ~ i::before,
+      i:hover::before{
+        content: "\f005";
+        color: rgb(227,207,122);
+      }
+      
+
+    </style>
+    
+    </head>
+  <body>
+    <section>
+      <i class="fa fa-star-o fa-3x"></i>
+      <i class="fa fa-star-o fa-3x"></i>
+      <i class="fa fa-star-o fa-3x"></i>
+      <i class="fa fa-star-o fa-3x"></i>
+      <i class="fa fa-star-o fa-3x"></i>
+      
+    </section>
+    
+
+  </body>
+</html>
