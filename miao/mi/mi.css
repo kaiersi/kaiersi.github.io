@@ -1,0 +1,358 @@
+@charset "UTF-8";
+/* 排序
+    display
+    width
+    height
+    position
+    left...
+    margin
+    pading
+    其他布局相关
+    line-height
+    vertical align
+    font类
+    */
+/* 全局css */
+body {
+  margin: 0;
+  font-family: Helvetica Neue, Helvetica, Arial, Microsoft Yahei, Hiragino Sans GB, Heiti SC, WenQuanYi Micro Hei, sans-serif;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  display: inline-block;
+}
+
+/* 页面全体 */
+#page {
+  display: flow-root;
+  position: relative;
+  min-width: 1226px;
+}
+
+#nav {
+  height: 40px;
+  position: relative;
+  background-color: #333333;
+}
+
+#nav .navcontainer {
+  width: 1226px;
+  height: 100%;
+  position: relative;
+  margin: 0 auto;
+}
+
+#nav .navcontainer ul {
+  height: 100%;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#nav .navcontainer ul:nth-child(2) {
+  right: 144px;
+}
+
+#nav .navcontainer ul li {
+  display: inline-block;
+  height: 100%;
+  line-height: 40px;
+  vertical-align: top;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+  font-size: 12px;
+  color: #b0b0b0;
+}
+
+#nav .navcontainer ul li .sep {
+  margin-left: 7px;
+  margin-right: 3.5px;
+  font-family: sans-serif;
+  color: #424242;
+}
+
+#nav .navcontainer ul li a {
+  color: #b0b0b0;
+  text-decoration: none;
+}
+
+#nav .navcontainer ul li:hover {
+  cursor: pointer;
+}
+
+#nav .navcontainer ul li:hover a {
+  color: white;
+}
+
+#nav .navcontainer .cart {
+  display: inline-block;
+  width: 120px;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  background-color: #424242;
+  text-align: center;
+  z-index: 2;
+}
+
+#nav .navcontainer .cart i {
+  display: inline-block;
+  margin-left: 15px;
+  margin-top: 9px;
+  font-size: 20px;
+  color: #b0b0b0;
+}
+
+#nav .navcontainer .cart > span {
+  display: inline-block;
+  height: 100%;
+  line-height: 40px;
+  vertical-align: top;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+  font-size: 12px;
+  color: #b0b0b0;
+}
+
+#nav .navcontainer .cart .cartbox {
+  width: 316px;
+  height: 0;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  visibility: hidden;
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 100px;
+  color: #424242;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  transition: 0.2s 0.1s;
+}
+
+#nav .navcontainer .cart:hover {
+  background-color: white;
+}
+
+#nav .navcontainer .cart:hover .cartbox {
+  height: 100px;
+  visibility: visible;
+  transition: 0.2s;
+}
+
+#nav .navcontainer .cart:hover > span {
+  color: #ff6700;
+}
+
+.titlebar-outer {
+  position: relative;
+}
+
+.titlebar-outer .title-bar {
+  width: 1226px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.titlebar-outer .title-bar .tb-d1 {
+  width: 234px;
+  height: 100%;
+  float: left;
+}
+
+.titlebar-outer .title-bar .tb-d1 a {
+  width: 56px;
+  height: 56px;
+  display: inline-block;
+  margin-top: 22px;
+  background-image: url(../../image/logo-mi2.png);
+  background-size: contain;
+}
+
+.titlebar-outer .title-bar ul {
+  width: 650px;
+  height: 100px;
+  float: left;
+  padding-left: 8px;
+  font-size: 0;
+}
+
+.titlebar-outer .title-bar ul li {
+  height: 55px;
+  margin-top: 10px;
+  padding-right: 15px;
+  overflow: hidden;
+  vertical-align: top;
+  font: Helvetica Neue, Helvetica, Arial, Microsoft Yahei, Hiragino Sans GB, Heiti SC, WenQuanYi Micro Hei, sans-serif;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+}
+
+.titlebar-outer .title-bar ul li a {
+  display: inline-block;
+  line-height: 75px;
+  cursor: pointer;
+}
+
+.titlebar-outer .title-bar ul li:hover {
+  color: #ff6700;
+}
+
+.titlebar-outer .title-bar ul li:hover .divs {
+  visibility: visible;
+  height: 231px;
+  transition: height 0.3s;
+  z-index: 3;
+}
+
+.titlebar-outer .title-bar ul li .divs {
+  width: 100%;
+  height: 0px;
+  box-sizing: border-box;
+  margin-top: 0px;
+  position: absolute;
+  left: 0;
+  top: 100px;
+  border-top: 1px solid #e0e0e0;
+  box-shadow: 0px 5px 7px -5px gray;
+  background-color: white;
+  overflow: hidden;
+  visibility: hidden;
+  transition: 0.3s 0.2s;
+  z-index: 2;
+}
+
+.titlebar-outer .title-bar ul li .divs div[class^="container"] {
+  width: 1226px;
+  height: 166px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto auto;
+  font-size: 0;
+  background-color: white;
+}
+
+.titlebar-outer .title-bar ul li .divs div[class^="container"] .product {
+  display: inline-block;
+  width: 180px;
+  height: 166px;
+  margin-right: 20px;
+  box-sizing: border-box;
+  vertical-align: top;
+  font-size: 16px;
+}
+
+.titlebar-outer .title-bar ul li .divs div[class^="container"] .product .last {
+  width: 160px;
+  margin-left: 10px;
+}
+
+.titlebar-outer .title-bar ul li .divs div[class^="container"] .product .last span {
+  display: inline-block;
+  width: 160px;
+  font-size: 12px;
+  line-height: 1.5em;
+  text-align: center;
+  color: black;
+}
+
+.titlebar-outer .title-bar ul li .divs div[class^="container"] .product .last span:first-of-type {
+  margin-top: 12px;
+}
+
+.titlebar-outer .title-bar ul li .divs div[class^="container"] .product .last span:nth-of-type(2) {
+  color: orange;
+}
+
+.titlebar-outer .title-bar .tb-d2 {
+  height: 100px;
+  float: right;
+  padding-top: 25px;
+  position: relative;
+}
+
+.titlebar-outer .title-bar .tb-d2 form {
+  width: 100%;
+  height: 50px;
+}
+
+.titlebar-outer .title-bar .tb-d2 input.text {
+  width: 245px;
+  height: 50px;
+  box-sizing: border-box;
+  border: 1px solid #e0e0e0;
+  padding-left: 10px;
+  border-right: none;
+  vertical-align: top;
+}
+
+.titlebar-outer .title-bar .tb-d2 input.text:focus {
+  border: 1px solid #ff6700;
+}
+
+.titlebar-outer .title-bar .tb-d2 input.text:focus + input.btn {
+  border: 1px solid #ff6700;
+}
+
+.titlebar-outer .title-bar .tb-d2 input.text:focus {
+  border-right: none;
+  outline: none;
+}
+
+.titlebar-outer .title-bar .tb-d2 input.btn {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #e0e0e0;
+  box-sizing: border-box;
+  box-shadow: none;
+  background-color: white;
+  vertical-align: top;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.titlebar-outer .title-bar .tb-d2 input.btn:hover {
+  background-color: #ff6700;
+  transition: 0.2s;
+}
+
+.titlebar-outer .title-bar .tb-d2 input.btn:hover + i {
+  color: white;
+  transition: 0.2s;
+}
+
+.titlebar-outer .title-bar .tb-d2 i.iconfont {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 35px;
+  left: 257px;
+  pointer-events: none;
+  transition: 0.2s;
+}
+
+.production-category {
+  width: 1226px;
+  height: 460px;
+  background-color: lightblue;
+  position: relative;
+  margin: 0 auto;
+}
+
+.spans {
+  width: 1226px;
+  height: 170px;
+  margin-top: 26px;
+  background-color: lightgreen;
+  position: relative;
+  margin: 0 auto;
+}

@@ -24,14 +24,16 @@
       xperspective-origin: 200px -200px;
       xperspective: 500px;
       transform-style: preserve-3d;
+      transform-origin: center center -50px;
       
     }
-    section{
-      animation: rotatee 3s linear infinite;
+    section:hover{
+      animation: rotatee 30s linear infinite;
     }
     @keyframes rotatee {
       to{
-        transform: rotateY(360deg) rotate(900deg);
+        xtransform: rotateY(360deg) rotate(900deg);
+        transform: rotateY(360deg) rotateX(360deg);
       }
     }
     section div{

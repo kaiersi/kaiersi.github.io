@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    header{
+      height: 100px;
+      background: url(../image/headerflower.jpg) no-repeat right top;
+    }
+    div.body{
+      background: url(../image/bg.jpg) repeat-x;
+      background-color:rgb(250,247,239);
+      xheight: 500px;
+    }
+    main{
+      width: 200px;
+      height: 200px;
+      box-sizing: border-box;
+      position: relative;
+
+      border: 2px solid red;
+      background-image: url(../image/clock.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: -27px;
+    }
+    .secpointer,.minpointer,.hourpointer{
+      position: absolute;
+      left: 91px;
+      bottom: 94px;
+    }
+    .secpointer{
+      height: 85px;
+      transform-origin: bottom;
+      animation: sec 60s infinite steps(60);
+    }
+    .minpointer{
+      height: 76px;
+      transform-origin: bottom;
+      animation: sec 3600s infinite steps(60);
+    }
+    .hourpointer{
+      height: 60px;
+      transform-origin: bottom;
+      animation: sec 216000s infinite steps(60);
+    }
+    @keyframes sec {
+      form{
+      }
+      to{
+        transform:rotate(1turn);
+      }
+    }
+    @keyframes min {
+      form{
+      }
+      to{
+        transform:rotate(1turn);
+      }
+    }
+    @keyframes hour {
+      form{
+      }
+      to{
+        transform:rotate(1turn);
+      }
+    }
+    main:nth-of-type(2) .secpointer{
+      animation: sec 6s infinite steps(60);
+    }
+    main:nth-of-type(2) .minpointer{
+      animation: sec 360s infinite steps(60);
+    }
+    main:nth-of-type(2) .hourpointer{
+      animation: sec 21600s infinite steps(60);
+    }
+    main:nth-of-type(3) .secpointer{
+      animation: sec 0.1s infinite steps(60);
+    }
+    main:nth-of-type(3) .minpointer{
+      animation: sec 6s infinite steps(60);
+    }
+    main:nth-of-type(3) .hourpointer{
+      animation: sec 360s infinite steps(60);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="body">
+    <header></header>
+    <section>
+      普通速度
+      <main>
+        <div class="clock1">
+          <span></span>
+        </div>
+        <img class="hourpointer" src="../image/hourpointer.jpg"></img>
+        <img class="minpointer" src="../image/minpointer.jpg"></img>
+        <img class="secpointer" src="../image/secpointer.jpg"></img>
+      </main>
+      10倍速
+      <main>
+        <div class="clock2">
+          <span></span>
+        </div>
+        <img class="hourpointer" src="../image/hourpointer.jpg"></img>
+        <img class="minpointer" src="../image/minpointer.jpg"></img>
+        <img class="secpointer" src="../image/secpointer.jpg"></img>
+      </main>
+      600倍速
+      <main>
+        <div class="clock3">
+          <span></span>
+        </div>
+        <img class="hourpointer" src="../image/hourpointer.jpg"></img>
+        <img class="minpointer" src="../image/minpointer.jpg"></img>
+        <img class="secpointer" src="../image/secpointer.jpg"></img>
+      </main>
+    </section>
+    <footer></footer>
+  </div>
+  
+
+
+</body>
+
+</html>
